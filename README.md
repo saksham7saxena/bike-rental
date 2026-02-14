@@ -1,29 +1,66 @@
-# Bike Rental Management System
+# Bike Rental System
 
-A C++ console-based application for managing a bike rental service. This project features a menu-driven interface to handle bikes, riders, and rental transactions using file handling for data persistence.
+![C++](https://img.shields.io/badge/Language-C++17-blue.svg)
+![Build](https://img.shields.io/badge/Build-CMake-green.svg)
 
-## Overview
+A high-performance, modular C++ application designed for efficient bike rental management. This system provides a robust CLI interface for tracking inventory, managing rider database, and simplifying the rental transaction process with automated pricing and state management.
 
-This project was developed as a Computer Science project during Class XII. It demonstrates core C++ concepts such as classes, objects, file handling, and menu-driven logic.
+## 🚀 Key Features
 
-## Features
+*   **Smart Inventory Management**: Track bike status real-time (`Available`, `Rented`, `Maintenance`) to prevent double-booking.
+*   **Dynamic Pricing Engine**: Automated cost calculation based on bike type (`Standard` vs `Premium`) and rental duration.
+*   **Persistent Storage**: Reliable CSV-based database system ensures data is saved between sessions without complex SQL dependencies.
+*   **Modular Architecture**: Built with clean, separation-of-concerns principles using modern C++17 standards.
+*   **Analytics Dashboard**: Integrated revenue tracking and active rental monitoring.
 
-*   **Bike Management**: Add, delete, search, and view available bikes.
-*   **Rider Management**: Register, edit, delete, and search for rider details.
-*   **Rental System**: Issue bikes to riders and handle returns.
-*   **Data Persistence**: Uses binary files (`.dat`) to store records securely.
+## 🛠️ Tech Stack
 
-## Tech Stack
+*   **Language**: C++17
+*   **Build System**: CMake
+*   **Data Format**: CSV (Comma-Separated Values)
+*   **Interface**: Command Line Interface (CLI)
 
-*   **Language**: C++
-*   **Compatibility**: Designed for Turbo C++ compiler (uses headers like `fstream.h`, `conio.h`).
+## 📦 Installation & Usage
 
-## Usage
+### Prerequisites
+*   C++ Compiler (GCC, Clang, or MSVC)
+*   CMake (Version 3.10 or higher)
 
-1.  Compile the source code using a C++ compiler (preferably Turbo C++ or DOSBox for full compatibility).
-2.  Run the executable.
-3.  Use the main menu to navigate through Bike Management, Rider Management, and Rental operations.
+### Build Instructions
 
-## Disclaimer
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/yourusername/bike-rental.git
+    cd bike-rental
+    ```
 
-This is a legacy project and uses older C++ standards. It may require modifications to compile on modern GCC/Clang compilers (e.g., updating headers to `<iostream>`, removing `conio.h` dependencies).
+2.  **Compile with CMake**
+    ```bash
+    mkdir build
+    cd build
+    cmake ..
+    cmake --build .
+    ```
+
+3.  **Run the Application**
+    *   **Linux/macOS**: `./BikeRentalSystem`
+    *   **Windows**: `Debug\BikeRentalSystem.exe`
+
+## 📂 Project Structure
+
+```bash
+bike-rental/
+├── data/               # Persistent CSV database
+│   ├── bikes.csv
+│   ├── riders.csv
+│   └── rentals.csv
+├── include/            # Header files (Interface)
+├── src/                # Source files (Implementation)
+├── legacy/             # Archive of previous versions
+├── CMakeLists.txt      # Build configuration
+└── README.md
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
